@@ -11,11 +11,14 @@ function App() {
     //   React.createElement('div',{},React.createElement('h2',{},"Let's get started!"),React.createElement(NewExpense,{},))
     // )
 
-
+  const addExpenseHandler = (expense) => {
+    console.log('In App.js');
+    console.log(expense);
+  }
 
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense = {addExpenseHandler}/>
       {/* <p>This is also visible</p> */}
       <Expenses />
       
